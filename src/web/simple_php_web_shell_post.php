@@ -36,4 +36,4 @@ if (isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) 
 		</form>
 		<pre><?php echo $output; unset($output); unset($_POST[$parameter]);/* @gc_collect_cycles();*/ ?></pre>
 	</body>
-</html>
+</html> <!--
